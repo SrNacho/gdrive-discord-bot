@@ -966,3 +966,32 @@ IPDL protocol error: Handler returned error code!
 1621647223720	Marionette	INFO	Marionette enabled
 1621647224922	Marionette	INFO	Listening on port 60095
 1621647225100	Marionette	WARN	TLS certificate errors will be ignored for this session
+1621663516011	geckodriver	INFO	Listening on 127.0.0.1:50482
+1621663521118	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\fotos\\AppData\\Local\\Temp\\rust_mozprofileWZ6QDM"
+1621663521813	Marionette	INFO	Marionette enabled
+1621663524400	Marionette	INFO	Listening on port 50490
+1621663524755	Marionette	WARN	TLS certificate errors will be ignored for this session
+1621663548740	geckodriver	INFO	Listening on 127.0.0.1:50570
+1621663553822	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\fotos\\AppData\\Local\\Temp\\rust_mozprofilebFhJS0"
+1621663554332	Marionette	INFO	Marionette enabled
+1621663555719	Marionette	INFO	Listening on port 50578
+1621663555838	Marionette	WARN	TLS certificate errors will be ignored for this session
+1621663565081	Marionette	INFO	Stopped listening on port 50578
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1621663881169	geckodriver	INFO	Listening on 127.0.0.1:50747
+1621663886252	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\fotos\\AppData\\Local\\Temp\\rust_mozprofileSUJbNh"
+1621663886435	Marionette	INFO	Marionette enabled
+1621663887795	Marionette	INFO	Listening on port 50756
+1621663888268	Marionette	WARN	TLS certificate errors will be ignored for this session
+1621663902834	geckodriver	INFO	Listening on 127.0.0.1:50816
+1621663907860	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\fotos\\AppData\\Local\\Temp\\rust_mozprofilerN0Of2"
+1621663908033	Marionette	INFO	Marionette enabled
+1621663909453	Marionette	INFO	Listening on port 50825
+1621663909875	Marionette	WARN	TLS certificate errors will be ignored for this session
+1621663915553	geckodriver	INFO	Listening on 127.0.0.1:50868
+1621663920606	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\fotos\\AppData\\Local\\Temp\\rust_mozprofile2uWERZ"
+1621663920795	Marionette	INFO	Marionette enabled
+1621663922153	Marionette	INFO	Listening on port 50877
+1621663922622	Marionette	WARN	TLS certificate errors will be ignored for this session

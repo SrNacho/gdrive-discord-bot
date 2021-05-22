@@ -1,22 +1,30 @@
+from dotenv import load_dotenv
 from selenium import webdriver
 import time
+import dotenv
+import os
 import sys
-sys.path.append('C:\\Users\\fotos\\Desktop\\scrapper de drive\\models')
+sys.path.append('..\scrapper de drive\\models')
 import pytz #libreria para la timezone de todo el mundo
 from datetime import datetime
 from containers import cont
 
+load_dotenv()
+URL = os.getenv('DRIVE_URL')
+TIME_ZONE = os.getenv('TIME_ZONE')
+MOZILLA_PROFILE = os.getenv('PROFILE')
+
 class bot:
-    tz_bsas = pytz.timezone('America/Argentina/Buenos_Aires') #timezone de argentina
+    d=0
+    tz_bsas = pytz.timezone(TIME_ZONE) #timezone de argentina
     listaDeHorarios = [] #Guarda los horarios que scrappea
     listaMantieneHorarios = [] #Mantiene los horarios de todo el dia
     container = cont()
-    d=0
-    options = webdriver.FirefoxProfile("C:/Users/fotos/AppData/Roaming/Mozilla/Firefox/Profiles/69cvsut4.default-release/") 
+    options = webdriver.FirefoxProfile(MOZILLA_PROFILE) 
     driver = webdriver.Firefox(executable_path="./geckodriver.exe",firefox_profile=options)
 
     def getTimes(self):
-        self.driver.get("https://drive.google.com/drive/folders/1NFzSZkVNK3RSibLfA33dsIjLflQhQo04")
+        self.driver.get(URL)
         time.sleep(7)
         if self.driver.find_element_by_class_name(self.container.contHoy).text == "Hoy": #Container donde dice la fecha
             logs = self.driver.find_elements_by_class_name(self.container.contLogs)
