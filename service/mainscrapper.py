@@ -18,7 +18,6 @@ class bot:
     def getTimes(self):
         self.driver.get("https://drive.google.com/drive/folders/1NFzSZkVNK3RSibLfA33dsIjLflQhQo04")
         time.sleep(7)
-
         if self.driver.find_element_by_class_name(self.container.contHoy).text == "Hoy": #Container donde dice la fecha
             logs = self.driver.find_elements_by_class_name(self.container.contLogs)
             for elem2 in logs[:10]: #Container de cada log en drive
@@ -26,14 +25,14 @@ class bot:
                 datetime_bsas = datetime.now(self.tz_bsas) #guarda la fecha actaual (now) de buenos aires
                 dia = datetime_bsas.strftime("%d") #formatea la fecha en el formato de solo "DD" porque no quiero que me muestre mas que el dia
                 if (elem3.get_attribute("title"))[0:2]==dia:
-                    print(elem3.get_attribute("title"))
+                    #print(elem3.get_attribute("title"))
                     self.listaDeHorarios.append(elem3.get_attribute("title"))
         else:
             self.listaDeHorarios.clear()
         
     def start(self):
         while True:            
-            self.getTimes(bot)
+            self.getTimes()
             print("--------------------------")
             if self.listaMantieneHorarios:
                 c= -1
@@ -45,17 +44,18 @@ class bot:
                         objHoraScreenshot[c].screenshot("./imgs/{f}-imagen.png".format(f=self.d))
                         self.listaMantieneHorarios.insert(0,x)
                         if len(self.listaMantieneHorarios)>10:self.listaMantieneHorarios.pop()
-                        print(x,"IMAGEN GUARDADA")
+                        return 200
+                        #print(x,"IMAGEN GUARDADA")
                 #listaMantieneHorarios.sort()
                 self.listaDeHorarios.clear()
             else:
-                print("ESTOY EN EL ELSE")
+                #print("ESTOY EN EL ELSE")
                 self.listaMantieneHorarios=self.listaDeHorarios.copy()
                 
             self.listaDeHorarios.clear()
             #listaMantieneHorarios.sort()
-            print(self.listaMantieneHorarios , "##listaDeHorarios vieja")
-            print(self.listaDeHorarios, "##listaDeHorarios nueva, se supone que debería estar vacia")
+            #print(self.listaMantieneHorarios , "##listaDeHorarios vieja")
+            #print(self.listaDeHorarios, "##listaDeHorarios nueva, se supone que debería estar vacia")
 
             #NOTAS:
             '''
