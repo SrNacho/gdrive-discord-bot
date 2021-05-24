@@ -8,4 +8,7 @@ Bot that read the last activity in google drive and takes a screenshot of every 
 * Set your mozilla profile with a google account added.
   * If you haven't already logged into Mozilla with a google account, you must.
   * Get your mozilla profile localizatión and set it. It's usually located at AppData/Roaming/Mozilla/Firefox/Profiles/xxxxxxxx.default-release/
+#### IMPORTANT
+You must create a "imgs" named folder where images will be located.
+
 * run "bot.py"
